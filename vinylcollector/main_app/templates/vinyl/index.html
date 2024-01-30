@@ -5,8 +5,8 @@
 {% for vinyl in vinyls %}
 <div class="card">
   <div class="card-content">
-    <span class="card-title">{{ vinyl.name }}</span>
-    <p>Album: {{ vinyl.album }}</p>
+    <span class="card-title">{{ vinyl.album }}</span>
+    <img class="z-depth-1 border" src="{{ vinyl.album_cover }}" alt="{{ vinyl.album }}">
     <p>Artist: {{ vinyl.artist }}</p>
     <p>Release Year: {{ vinyl.release_year }}</p>
     <p>Genre: {{ vinyl.genre }}</p>

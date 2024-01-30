@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,11 +10,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
   </head>
   <body>
-    <header class="navbar-fixed">
+    <header class="navbar-fixed indigo">
       <nav>
-        <div class="nav-wrapper">
+        <div class="nav-wrapper indigo">
           <ul>
             <li>
               <a href="/" class="left brand-logo">&nbsp;&nbsp;VinylCollector</a>
@@ -27,10 +29,11 @@
       </nav>
     </header>
     <main class="container">{% block content %} {% endblock %}</main>
-    <footer class="page-footer">
+    <footer class="page-footer indigo">
       <div class="right">
         All Rights Reserved, &copy; 2024 Vinyl Collector &nbsp;
       </div>
     </footer>
+    
   </body>
 </html>
