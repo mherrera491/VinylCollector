@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Vinyl List</h1>
+
+{% for vinyl in vinyls %}
+<div class="card">
+  <div class="card-content">
+    <span class="card-title">{{ vinyl.name }}</span>
+    <p>Album: {{ vinyl.album }}</p>
+    <p>Artist: {{ vinyl.artist }}</p>
+    <p>Release Year: {{ vinyl.release_year }}</p>
+    <p>Genre: {{ vinyl.genre }}</p>
+  </div>
+</div>
+{% endfor %} {% endblock %}
