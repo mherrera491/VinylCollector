@@ -1,21 +1,27 @@
 {% extends 'base.html' %} {% block content %}
 
 <h1>Vinyl List</h1>
-
-{% for vinyl in vinyls %}
-<div class="card">
-  <a href="{% url 'detail' vinyl.id %}">
-    <div class="card-content">
-      <span class="card-title">{{ vinyl.album }}</span>
-      <img
-        class="z-depth-1 border"
-        src="{{ vinyl.album_cover }}"
-        alt="{{ vinyl.album }}"
-      />
-      <p>Artist: {{ vinyl.artist }}</p>
-      <p>Release Year: {{ vinyl.release_year }}</p>
-      <p>Genre: {{ vinyl.genre }}</p>
+<div class="row">
+  {% for vinyl in vinyls %}
+  <div class="col s5">
+    <div class="card">
+      <a href="{% url 'detail' vinyl.id %}">
+        <div class="card-content">
+          <span class="card-title">{{ vinyl.album }}</span>
+          <img
+            class="z-depth-1 border album-cover"
+            src="{{ vinyl.album_cover }}"
+            alt="{{ vinyl.album }}"
+            width="300"
+            height="300"
+          />
+          <p>Artist: {{ vinyl.artist }}</p>
+          <p>Release Year: {{ vinyl.release_year }}</p>
+          <p>Genre: {{ vinyl.genre }}</p>
+        </div>
+      </a>
     </div>
-  </a>
+  </div>
+  {% endfor %}
 </div>
-{% endfor %} {% endblock %}
+{% endblock %}
